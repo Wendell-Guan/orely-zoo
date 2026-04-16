@@ -6,14 +6,14 @@ export default function Hero() {
   const { t } = useI18n();
   const [category, setCategory] = useState(t.hero.categoryOptions[0]);
   const [region, setRegion] = useState(t.hero.regionOptions[0]);
-  const [budget, setBudget] = useState(t.hero.budgetOptions[1]);
+  const [budget, setBudget] = useState(t.hero.budgetOptions[3]);
   const [toast, setToast] = useState<string | null>(null);
 
   // reset to first option when language changes
   useEffect(() => {
     setCategory(t.hero.categoryOptions[0]);
     setRegion(t.hero.regionOptions[0]);
-    setBudget(t.hero.budgetOptions[1]);
+    setBudget(t.hero.budgetOptions[3]);
   }, [t]);
 
   const handleSearch = () => {

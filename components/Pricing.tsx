@@ -8,7 +8,7 @@ export default function Pricing() {
       <h2 className="font-display text-3xl md:text-4xl text-ink tracking-wide">{t.pricing.title}</h2>
       <p className="mt-2 text-xs md:text-[13px] text-[#5a4a36] px-2">{t.pricing.sub}</p>
 
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {t.pricing.plans.map((p, idx) => (
           <div
             key={p.name}
@@ -16,8 +16,8 @@ export default function Pricing() {
           >
             <div className="text-center border-b-2 border-dashed border-[#d9c89a] pb-4 mb-4">
               <h3 className="font-display text-2xl text-ink">{p.name}</h3>
-              <div className="font-display text-3xl text-orange mt-1">
-                ${p.price}<span className="text-xs text-neutral-500 font-body font-medium">{t.pricing.perBundle}</span>
+              <div className="font-display text-2xl md:text-3xl text-orange mt-1">
+                ${p.price.toLocaleString()}<span className="text-xs text-neutral-500 font-body font-medium">{t.pricing.perBundle}</span>
               </div>
               <div className="text-[10px] tracking-[3px] text-neutral-500 mt-1">0 &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4</div>
             </div>
