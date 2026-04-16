@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stories from "@/components/Stories";
+import Catalog from "@/components/Catalog";
 import Pricing from "@/components/Pricing";
 import ThingsToDo from "@/components/ThingsToDo";
 import Reviews from "@/components/Reviews";
@@ -21,6 +22,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stories />
+      <Catalog />
       <Pricing />
       <ThingsToDo />
       <Reviews />
