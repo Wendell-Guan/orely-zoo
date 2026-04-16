@@ -1,0 +1,40 @@
+export default function Navbar() {
+  const links = ["Home", "About", "Tickets", "Gallery", "Events"];
+  return (
+    <header className="relative z-10 flex items-center justify-between px-8 md:px-14 py-6">
+      <Logo />
+      <nav className="hidden md:flex gap-7">
+        {links.map((l, i) => (
+          <a key={l} href="#" className={`text-sm font-medium ${i === 0 ? "text-orange" : "text-white/85 hover:text-white"}`}>
+            {l}
+          </a>
+        ))}
+      </nav>
+      <Socials />
+    </header>
+  );
+}
+
+export function Logo() {
+  return (
+    <div className="flex items-center gap-2.5">
+      <div className="grid place-items-center w-10 h-10 rounded-full bg-orange border-[3px] border-white text-white font-display font-bold text-xl">
+        O
+      </div>
+      <div>
+        <div className="text-white font-display font-bold tracking-widest text-sm">ORELY ZOO</div>
+        <div className="text-sand text-[10px] tracking-[2px]">Safari Adventure</div>
+      </div>
+    </div>
+  );
+}
+
+export function Socials() {
+  return (
+    <div className="flex gap-2">
+      {Array.from({ length: 4 }).map((_, i) => (
+        <span key={i} className="w-3.5 h-3.5 rounded-full bg-white/70 border-2 border-orange" />
+      ))}
+    </div>
+  );
+}

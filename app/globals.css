@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background:#0e3a2f; color:#2b2016; }
+
+.paper {
+  position: relative;
+  background-image: linear-gradient(135deg, #fff9e8 0%, #fff2cf 100%);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  border-radius: 4px;
+}
+.paper::before, .paper::after {
+  content: '';
+  position: absolute;
+  width: 80px; height: 20px;
+  background: rgba(244, 164, 43, 0.55);
+  top: -10px;
+}
+.paper::before { left: 22px; transform: rotate(-4deg); }
+.paper::after  { right: 22px; transform: rotate(3deg); }
+
+.tape-top::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 90px; height: 18px;
+  background: rgba(244, 164, 43, 0.55);
+}
+
+.text-shadow-hero {
+  text-shadow: 3px 3px 0 #0e3a2f, 6px 6px 0 rgba(0,0,0,0.18);
+}

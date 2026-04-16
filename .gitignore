@@ -1,0 +1,8 @@
+node_modules
+.next
+.vercel
+.DS_Store
+*.log
+.env*.local
+完成参考图.jpg
+背景图.png
