@@ -1,9 +1,12 @@
 "use client";
 import { useState } from "react";
+import { useI18n } from "@/lib/i18n";
 
 export default function Navbar() {
-  const links = ["Home", "About", "Shop", "Species", "Contact"];
+  const { t, lang, setLang } = useI18n();
+  const links = [t.nav.home, t.nav.about, t.nav.shop, t.nav.species, t.nav.contact];
   const [open, setOpen] = useState(false);
+
   return (
     <header className="relative z-10 px-5 md:px-14 py-5 md:py-6">
       <div className="flex items-center justify-between">
@@ -15,7 +18,10 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-        <div className="hidden md:block"><Socials /></div>
+        <div className="hidden md:flex items-center gap-4">
+          <LangToggle lang={lang} setLang={setLang} />
+          <Socials />
+        </div>
         <button
           aria-label="Toggle menu"
           className="md:hidden w-9 h-9 grid place-items-center rounded-full bg-white/10 text-white"
@@ -32,22 +38,38 @@ export default function Navbar() {
               {l}
             </a>
           ))}
-          <div className="pt-2"><Socials /></div>
+          <div className="flex items-center justify-between pt-2">
+            <Socials />
+            <LangToggle lang={lang} setLang={setLang} />
+          </div>
         </nav>
       )}
     </header>
   );
 }
 
+function LangToggle({ lang, setLang }: { lang: "en" | "zh"; setLang: (l: "en" | "zh") => void }) {
+  return (
+    <button
+      onClick={() => setLang(lang === "en" ? "zh" : "en")}
+      className="px-3 py-1 rounded-full border border-white/40 text-white text-xs font-semibold hover:bg-white/10"
+      aria-label="Switch language"
+    >
+      {lang === "en" ? "中文" : "EN"}
+    </button>
+  );
+}
+
 export function Logo() {
+  const { t } = useI18n();
   return (
     <div className="flex items-center gap-2.5">
       <div className="grid place-items-center w-10 h-10 rounded-full bg-orange border-[3px] border-white text-white font-display font-bold text-xl">
         O
       </div>
       <div>
-        <div className="text-white font-display font-bold tracking-widest text-sm">ORELY EXOTICS</div>
-        <div className="text-sand text-[10px] tracking-[2px]">Rare & Exotic Pets</div>
+        <div className="text-white font-display font-bold tracking-widest text-sm">{t.brand}</div>
+        <div className="text-sand text-[10px] tracking-[2px]">{t.tagline}</div>
       </div>
     </div>
   );
