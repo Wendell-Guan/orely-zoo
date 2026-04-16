@@ -1,23 +1,23 @@
 const reviews = [
-  { name: "Purwanti Dongki", role: "Zookeeper",     text: "One of the best experiences our family has had. The staff were kind and the animals looked healthy and happy. We cannot wait to come back soon!" },
-  { name: "Tejo Intan",      role: "Blogger",       text: "The kids were thrilled, and the food was delicious. The zoo is well laid-out, and every staff member we met was wonderfully friendly." },
-  { name: "Jack Morwogin",   role: "Vlogger",       text: "Incredibly organized and clean, with plenty of fun learning opportunities. My family and I had a very enjoyable visit from start to finish." },
-  { name: "Bibit Wismore",   role: "Content Creator", text: "Amazing experience all around. They made a trip to the zoo enjoyable for guests of all ages. Highly recommended for a weekend out!" },
+  { name: "Purwanti Dongki", role: "Reptile Keeper",   text: "My crested gecko arrived active, healthy, and beautifully patterned. The care sheet was detailed and the team answered every follow-up question within hours." },
+  { name: "Tejo Intan",      role: "Hobby Breeder",    text: "I have bought from many exotic sellers, and Orely's documentation and breeder transparency is best-in-class. Lineage records were a huge plus." },
+  { name: "Jack Morwogin",   role: "Parrot Owner",     text: "Our Indian ringneck shipped overnight and was calm on arrival. The habitat consultation before purchase saved us weeks of trial and error." },
+  { name: "Bibit Wismore",   role: "First-Time Owner", text: "As a complete beginner I felt supported the whole way. They recommended a starter species that matched my lifestyle, not just the most expensive one." },
 ];
 
 export default function Reviews() {
   return (
-    <section className="px-5 md:px-14 py-20 text-center text-white">
-      <h2 className="font-display text-4xl tracking-wide">PEOPLE ARE LOVING US!</h2>
-      <p className="mt-2 text-[13px] text-sand">
-        We keep striving to provide top quality services and hearing from satisfied customers.
+    <section className="px-5 md:px-14 py-16 md:py-20 text-center text-white">
+      <h2 className="font-display text-3xl md:text-4xl tracking-wide">TRUSTED BY KEEPERS WORLDWIDE</h2>
+      <p className="mt-2 text-xs md:text-[13px] text-sand px-2">
+        Real reviews from buyers who brought home a companion through Orely Exotics.
       </p>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
         {reviews.map((r) => (
-          <div key={r.name} className="paper tape-top p-6 text-left text-ink">
+          <div key={r.name} className="paper tape-top p-5 md:p-6 text-left text-ink">
             <div className="text-orange tracking-[2px] text-sm">★★★★★</div>
-            <p className="text-xs leading-[1.7] my-2.5 text-[#5a4a36]">“{r.text}”</p>
+            <p className="text-xs leading-[1.7] my-2.5 text-[#5a4a36]">&ldquo;{r.text}&rdquo;</p>
             <div className="flex items-center gap-2.5 mt-3">
               <div className="w-9 h-9 rounded-full bg-orange" />
               <div>

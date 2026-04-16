@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main
-      className="relative mx-auto max-w-[1200px] min-h-screen bg-forest"
+      className="relative mx-auto max-w-[1200px] min-h-screen bg-forest overflow-hidden"
       style={{
         backgroundImage: "url('/bg.png')",
         backgroundSize: "100% auto",
@@ -23,18 +23,18 @@ export default function Home() {
 
       <StoryCard
         align="right"
-        title={<>WILDLIFE<br />SANCTUARY</>}
-        body="Orely is a Wildlife Sanctuary and Conservation Center located in the North. It houses exotic animals such as tigers, lions, elephants, and monkeys. A massive butterfly-showing Aviary with 3 stops, plus endangered species and numerous wildlife preservation programs."
+        title={<>RARE SPECIES<br />MARKETPLACE</>}
+        body="Orely Exotics is a curated marketplace for rare and exotic pets. We source reptiles, parrots, small mammals, and aquatic species only from licensed, ethical breeders who meet our strict welfare standards."
       />
       <StoryCard
         align="left"
-        title={<>PROTECT NATURE<br />&amp; RARE SPECIES</>}
-        body="Orely displays a variety of animals from around the world. The African savannah, the Sea Safari, and a Wildlife Discovery & Treatment Environment. The Big Cat Exhibit contains Tigers, Lions, and Leopards in their habitat."
+        title={<>LIVE ARRIVAL<br />&amp; HEALTH GUARANTEE</>}
+        body="Every animal ships with temperature-controlled overnight delivery and a full live-arrival guarantee. Our in-house vets screen each pet, and you receive a health certificate, feeding plan, and habitat checklist before it leaves the facility."
       />
       <StoryCard
         align="right"
-        title={<>ORELY ZOO<br />CONSERVATION</>}
-        body="Orely is dedicated to educating the public about wildlife conservation and taking an active role in its care with ethical, positive educational content, coordinated programs for all ages, and information about different animal species."
+        title={<>ETHICAL SOURCING<br />&amp; LIFETIME SUPPORT</>}
+        body="No wild-caught animals — ever. We verify breeder permits, publish lineage records, and support every buyer with lifetime care consultations so your exotic companion thrives for years to come."
       />
 
       <Pricing />

@@ -6,8 +6,8 @@ const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-fredoka", weight
 const poppins = Poppins({ subsets: ["latin"], variable: "--font-poppins", weight: ["300", "400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: "Orely Zoo — Safari Adventure",
-  description: "Explore the wild with us at Orely Zoo.",
+  title: "Orely Exotics — Rare & Exotic Pets",
+  description: "Discover rare and exotic pets from ethical breeders at Orely Exotics.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,20 +1,20 @@
 const items = [
-  { n: "01", t: "GUIDED TOURS", d: "Go on an exciting guided safari tour with our expert zookeepers, who share fascinating stories about our amazing animals." },
-  { n: "02", t: "EDUCATIONAL PROGRAMS", d: "We offer educational programs for visitors of all ages, including animal feedings, live demos, and behind-the-scenes tours." },
-  { n: "03", t: "FOOD & BEVERAGES", d: "Our zoo restaurants and cafes provide a wide range of delicious meals, snacks, and beverages made with fresh ingredients." },
+  { n: "01", t: "BROWSE & RESERVE", d: "Explore our live catalog of rare reptiles, parrots, and small mammals. Reserve your pet with a deposit and we'll hold it until your habitat is ready." },
+  { n: "02", t: "HABITAT CONSULTATION", d: "Our specialists help you set up the perfect enclosure — lighting, heating, diet, and enrichment tailored to each species." },
+  { n: "03", t: "SAFE DELIVERY", d: "Overnight climate-controlled shipping with live-arrival guarantee, or pick up in-store and meet your new companion in person." },
 ];
 
 export default function ThingsToDo() {
   return (
-    <section className="px-5 md:px-14 pt-24 pb-20 text-center text-white">
-      <h2 className="font-display text-4xl tracking-wide">THINGS TO DO</h2>
-      <p className="mt-2 text-[13px] text-sand max-w-xl mx-auto">
-        Step into a world of adventure and wonder at our zoo! Enjoy a variety of thrilling and educational experiences for visitors of all ages.
+    <section className="px-5 md:px-14 pt-20 md:pt-24 pb-16 md:pb-20 text-center text-white">
+      <h2 className="font-display text-3xl md:text-4xl tracking-wide">HOW IT WORKS</h2>
+      <p className="mt-2 text-xs md:text-[13px] text-sand max-w-xl mx-auto px-2">
+        From first click to happy pet — a transparent process designed for first-time owners and seasoned collectors alike.
       </p>
 
-      <div className="mt-10 max-w-2xl ml-auto flex flex-col gap-5">
+      <div className="mt-10 max-w-2xl md:ml-auto flex flex-col gap-5">
         {items.map((i) => (
-          <div key={i.n} className="paper tape-top flex gap-5 p-6 text-left text-ink">
+          <div key={i.n} className="paper tape-top flex gap-4 md:gap-5 p-5 md:p-6 text-left text-ink">
             <span className="font-display text-3xl text-orange shrink-0">{i.n}</span>
             <div>
               <h4 className="font-display text-base tracking-wide mb-1">{i.t}</h4>
